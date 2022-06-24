@@ -1,0 +1,54 @@
+GET http://localhost:3000/ HTTP/1.1
+
+
+### 
+GET http://localhost:3000/books HTTP/1.1
+
+###
+POST http://localhost:3000/books HTTP/1.1
+Content-Type: application/json
+
+{
+      "isbn": "112cs",
+      "title":"MongoDb beginner",
+      "price": 3999,
+      "author":"YN Kanitkar",
+      "category": {
+         "categoryId": "cs",
+         "name":"Computer science"
+      },
+      "publisher": {
+         "publisherId":"isb234civ",
+         "name": "chitrangana book publisher"
+      }
+
+}
+
+###
+GET http://localhost:3000/users HTTP/1.1
+
+###
+POST http://localhost:3000/users HTTP/1.1
+Content-Type: application/json
+
+    {
+        "firstName":"Rohit",
+        "lastName": "Manora",
+        "userId": "0801cs",
+        "password":"Raohit$#",
+        "email":"rohit@gmail.com",
+        "borrowBooks": []
+    }
+
+###
+POST http://localhost:3000/users HTTP/1.1
+Content-Type: application/json
+
+    {
+        "firstName":"",
+        "lastName": "",
+        "userId": "",
+        "password":"",
+        "email":"",
+        "borrowBooks": []
+    }
