@@ -1,7 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
-import routes from './src/routes/book.route'
+import routes from './renew-book-service/src/routes/book.route'
 
 const app = express();
 const PORT = 3000;
