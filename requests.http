@@ -1,0 +1,110 @@
+GET http://localhost:3000/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvaGl0QGdtYWlsLmNvbSIsImlhdCI6MTY1NjI1NzE1NH0.XbZiMKrGxN-GtGdJRp0vh3nN8adayZfgFasL3ukzsrQ
+
+
+
+### 
+GET http://localhost:3000/books HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvaGl0QGdtYWlsLmNvbSIsImlhdCI6MTY1NjI1NzE1NH0.XbZiMKrGxN-GtGdJRp0vh3nN8adayZfgFasL3ukzsrQ
+
+
+###
+POST http://localhost:3000/books HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvaGl0QGdtYWlsLmNvbSIsImlhdCI6MTY1NjI1NzE1NH0.XbZiMKrGxN-GtGdJRp0vh3nN8adayZfgFasL3ukzsrQ
+Content-Type: application/json
+
+{
+      "isbn": "113Elc",
+      "title":"Electric motor working",
+      "price": 3199,
+      "author":"DB patil",
+      "category": {
+         "categoryId": "elect",
+         "name":"Electronic Science"
+      },
+      "publisher": {
+         "publisherId":"isb2347yt",
+         "name": "chitrangana book publisher"
+      }
+
+}
+
+
+###
+PUT  http://localhost:3000/books/62b9fae6baa00b0d97f5ed18 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvaGl0QGdtYWlsLmNvbSIsImlhdCI6MTY1NjI1NzE1NH0.XbZiMKrGxN-GtGdJRp0vh3nN8adayZfgFasL3ukzsrQ
+Content-Type: application/json
+
+{
+      "isbn": "113Anti",
+      "title":"Antinna  working",
+      "price": 399,
+      "author":"Yen manchenskey",
+      "category": {
+         "categoryId": "elect",
+         "name":"Electronic Science"
+      },
+      "publisher": {
+         "publisherId":"isb2347yt",
+         "name": "chitrangana book publisher"
+      }
+
+}
+
+###
+DELETE  http://localhost:3000/books/62b9fae6baa00b0d97f5ed18 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvaGl0QGdtYWlsLmNvbSIsImlhdCI6MTY1NjI1NzE1NH0.XbZiMKrGxN-GtGdJRp0vh3nN8adayZfgFasL3ukzsrQ
+Content-Type: application/json
+
+
+
+###
+GET http://localhost:3000/users HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvaGl0QGdtYWlsLmNvbSIsImlhdCI6MTY1NjI1NzE1NH0.XbZiMKrGxN-GtGdJRp0vh3nN8adayZfgFasL3ukzsrQ
+
+
+###
+POST http://localhost:3000/users HTTP/1.1
+Content-Type: application/json
+
+    {
+        "firstName":"Ram",
+        "lastName": "gupta",
+        "userId": "0801ele",
+        "password":"ram$#656",
+        "email":"ram@gmail.com",
+        "borrowBooks": []
+    }
+
+###
+PUT  http://localhost:3000/users/62b5ab9f0799b2a36f170e33 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvaGl0QGdtYWlsLmNvbSIsImlhdCI6MTY1NjI1NzE1NH0.XbZiMKrGxN-GtGdJRp0vh3nN8adayZfgFasL3ukzsrQ
+Content-Type: application/json
+
+    {
+        "firstName": "Rohit",
+        "lastName": "Manora",
+        "userId": "0801cs",
+        "password": "Raohit$#",
+        "email": "rohit@gmail.com",
+        "borrowBooks": []
+    }
+
+###
+DELETE  http://localhost:3000/users/62b5ab9f0799b2a36f170e33 HTTP/1.1
+Content-Type: application/json
+
+
+###
+POST http://localhost:3000/login HTTP/1.1
+Content-Type: application/json
+
+    {
+        "email":"rohit@gmail.com",
+        "password":"Raohit$#"
+    }
+
+
+###
+GET http://localhost:3000/authorize HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvaGl0QGdtYWlsLmNvbSIsImlhdCI6MTY1NjI1NzE1NH0.XbZiMKrGxN-GtGdJRp0vh3nN8adayZfgFasL3ukzsrQ
