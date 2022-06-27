@@ -1,5 +1,9 @@
 import mongoose from "mongoose";
 import { UserSchema } from "../models/user";
+import { authenticateUser } from "../controllers/authenticate.controllers";
+
+
+
 
 const Users =  mongoose.model('Users', UserSchema);
 

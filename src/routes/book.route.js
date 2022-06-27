@@ -13,9 +13,10 @@ const routes = (app) => {
    .get(getAllBooks)
    .post(addBook);
 
-   app.route('/users')
-   .get(getAllUsers)
-   .post(addNewUsers)
+  //  app.route('/users')
+  // .get(getAllUsers)
+  // .post(addNewUsers)
+  
 
 }
 export default routes;
