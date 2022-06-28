@@ -73,7 +73,12 @@ Content-Type: application/json
         "userId": "0801ele",
         "password":"ram$#656",
         "email":"ram@gmail.com",
-        "borrowBooks": []
+        "borrowedBooks": [{
+            "title":"MongoDb beginner",
+            "isbn":"112cs",
+            "createdAt":"2022-06-28",
+            "dueDate":"2022-06-30"
+        }]
     }
 
 ###
@@ -87,7 +92,12 @@ Content-Type: application/json
         "userId": "0801cs",
         "password": "Raohit$#",
         "email": "rohit@gmail.com",
-        "borrowBooks": []
+        "borrowedBooks": [{
+            "title":"MongoDb beginner",
+            "isbn":"112cs",
+            "createdAt":"2022-06-28",
+            "dueDate":"2022-06-30"
+        }]
     }
 
 ###
@@ -107,4 +117,13 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/authorize HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvaGl0QGdtYWlsLmNvbSIsImlhdCI6MTY1NjI1NzE1NH0.XbZiMKrGxN-GtGdJRp0vh3nN8adayZfgFasL3ukzsrQ
+
+###
+GET http://localhost:3000/users HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvaGl0QGdtYWlsLmNvbSIsImlhdCI6MTY1NjI1NzE1NH0.XbZiMKrGxN-GtGdJRp0vh3nN8adayZfgFasL3ukzsrQ
+
+
+###
+POST  http://localhost:3000/reservebook/62b877c4b342f4fa09d0e08b HTTP/1.1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvaGl0QGdtYWlsLmNvbSIsImlhdCI6MTY1NjI1NzE1NH0.XbZiMKrGxN-GtGdJRp0vh3nN8adayZfgFasL3ukzsrQ

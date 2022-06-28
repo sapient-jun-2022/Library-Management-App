@@ -23,7 +23,7 @@ route.route("/users/:userId").put(userController.updateUsers).delete(userControl
 
 route.route("/books").get(booksController.getAllBooks).post(booksController.addBook);
 route.route("/books/:bookId").put(booksController.updateBooks).delete(booksController.deleteBooksById);
-
+route.route("/reservebook/:bookId").post(booksController.reservebook);
 
 route.route("/").get(home);
 
